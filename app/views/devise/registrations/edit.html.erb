@@ -11,16 +11,23 @@
     <% end %>
 
     <%= f.input :password,
+                label: 'E-mail',
                 hint: "leave it blank if you don't want to change it",
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
+                label: 'Mot de passe',
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :current_password,
+                label: 'Confirmation du mot de passe',
                 hint: "we need your current password to confirm your changes",
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
+    <%= f.input :nom, label: 'Nom', required: false %>
+    <%= f.input :prenom, label: 'Prénom', required: false %>
+    <%= f.input :club, label: 'Club', required: false %>
+    <%= f.input :pays, label: 'Pays', required: false %>
   </div>
 
   <div class="form-actions">
