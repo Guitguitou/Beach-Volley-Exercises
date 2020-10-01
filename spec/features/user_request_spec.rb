@@ -37,9 +37,11 @@ RSpec.describe "Users" do
 
   describe 'quand un utilisateur modifie son compte' do
     let(:user2) { User.create(nom: 'Hanin', prenom: 'Roger', club: 'PJ', pays: 'France', email: 'rh@pj.fr', password: 'password', password_confirmation: 'password')}
+    let(:guitou) {create(:user)}
+
     fit 'affiche les bons champs' do
-      sign_in user2
-      visit edit_user_registration_path(user2)
+      se_connecte_en_tant_qu_user(guitou)
+      visit edit_user_registration_path(guitou)
 
       expect(page).to have_content 'Nom'
       expect(page).to have_content 'Prénom'
