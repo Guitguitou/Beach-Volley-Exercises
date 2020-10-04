@@ -35,7 +35,7 @@ RSpec.describe "Users" do
     end
   end
 
-  fdescribe 'quand un utilisateur modifie son compte' do
+  describe 'quand un utilisateur modifie son compte' do
     let!(:guitou) {create(:user)}
 
     it 'affiche les bons champs' do
