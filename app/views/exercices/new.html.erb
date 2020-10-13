@@ -1,7 +1,1 @@
-<%= simple_form_for(@exercice) do |f| %>
-  <%= f.input :nom, label: "Nom de l'exercice" %>
-  <%= f.input :description, label: "Description de l'exercice" %>
-  <%= f.input :worked, label: "Qu’est ce qu’on travaille?" %>
-  <%= f.input :fonction, label: "Type d'exercice" %>
-  <%= f.button :submit, "Enregistrer" %>
-<% end %>
+<%= shared 'exercice_form' %>

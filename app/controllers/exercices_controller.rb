@@ -17,6 +17,10 @@ class ExercicesController < ApplicationController
     end
   end
 
+  def edit
+    @exercice = Exercice.find(params[:id])
+  end
+
   private
 
   def exercices_params

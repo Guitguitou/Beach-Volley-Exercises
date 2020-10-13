@@ -32,4 +32,18 @@ RSpec.describe "Exercices" do
 
     end
   end
+
+  fdescribe 'quand un utilisateur modifie un exercice' do
+    let(:guitou) { create(:user) }
+    let(:exercice) { create(:exercice) }
+    it 'modifie son exercice' do
+      se_connecte_en_tant_qu_user(guitou)
+      visit edit_exercice_path(exercice)
+
+      expect(page).to have_content("Nom de l'exercice")
+      expect(page).to have_content("Description de l'exercice")
+      expect(page).to have_content("Qu’est ce qu’on travaille?")
+      expect(page).to have_content("Type d'exercice")
+    end
+  end
 end
